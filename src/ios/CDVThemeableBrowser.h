@@ -63,7 +63,6 @@
 @class CDVThemeableBrowserViewController;
 
 @interface CDVThemeableBrowser : CDVPlugin {
-    BOOL _injectedIframeBridge;
 }
 
 @property (nonatomic, retain) CDVThemeableBrowserViewController* themeableBrowserViewController;
@@ -87,13 +86,13 @@
     NSInteger _userAgentLockToken;
     UIStatusBarStyle _statusBarStyle;
     CDVThemeableBrowserOptions *_browserOptions;
-    
+
 #ifdef __CORDOVA_4_0_0
     CDVUIWebViewDelegate* _webViewDelegate;
 #else
     CDVWebViewDelegate* _webViewDelegate;
 #endif
-    
+
 }
 
 @property (nonatomic, strong) IBOutlet UIWebView* webView;
@@ -132,4 +131,3 @@
 @property (nonatomic, weak) id <CDVScreenOrientationDelegate> orientationDelegate;
 
 @end
-
