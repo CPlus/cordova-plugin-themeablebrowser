@@ -1290,8 +1290,10 @@ public class ThemeableBrowser extends CordovaPlugin {
             }
 
             // Update the UI if we haven't already
-            if (!newloc.equals(edittext.getText().toString())) {
-                edittext.setText(newloc);
+            if (edittext != null) {
+                if (!newloc.equals(edittext.getText().toString())) {
+                    edittext.setText(newloc);
+                }
             }
 
             try {
